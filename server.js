@@ -4,7 +4,7 @@ var app = express();
 
 app.get('/', (req, res) => {
     res.status(200).send({
-        name: 'John',
+        name: 'Johsn',
         age: 26
     });
 });
