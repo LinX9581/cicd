@@ -6,7 +6,7 @@ pipeline:
       - npm test
   slack:
     image: plugins/slack
-    webhook: {你申請到的 Slack Webhook URL}
+    webhook: {https://hooks.slack.com/services/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}
     channel: docker
     template: >
       {{#success build.status}}
