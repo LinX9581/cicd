@@ -5,7 +5,7 @@ pipeline:
       - npm install
   slack:
     image: plugins/slack
-    webhook: {https://hooks.slack.com/services/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}
+    webhook: https://hooks.slack.com/services/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
     channel: docker
     template: >
       {{#success build.status}}
