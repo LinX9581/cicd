@@ -7,12 +7,12 @@ pipeline:
   ssh-deploy:
     image: appleboy/drone-ssh
     pull: true  # always pull the latest version of the `drone-ssh` plugin
-    username: 
-      from_secret: drone
-    password: 
-      from_secret: privateKey
     host: 35.201.239.81
     port: 22
+    username: drone
+    key_path: /root/.ssh/id_rsa
+    volumes:
+      - /root/.ssh/id_rsa:/root/.ssh/id_rsa
     script:
       - sudo mkdir /var/test2  # or whereever you put your `deploy.sh`
     when:
