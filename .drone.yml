@@ -7,14 +7,14 @@ pipeline:
   ssh-deploy:
     image: appleboy/drone-ssh
     pull: true  # always pull the latest version of the `drone-ssh` plugin
-    host: 35.201.239.81
+    host: cicd.linxnote.club
     port: 22
     username: drone
     key:
       from_secret: privateKey
     target: /root/.ssh/id_rsa
     script:
-      - sudo mkdir /var/test2  # or whereever you put your `deploy.sh`
+      - sudo mkdir /var/test3  # or whereever you put your `deploy.sh`
     when:
       event: [push, tag, deployment]
   slack:
