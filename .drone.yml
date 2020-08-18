@@ -7,7 +7,9 @@ pipeline:
   ssh-deploy:
     image: appleboy/drone-ssh
     pull: true  # always pull the latest version of the `drone-ssh` plugin
-    host: cicd.linxnote.club
+    host: 
+      - 35.201.239.81
+      - 35.236.146.68
     port: 22
     username: drone
     key:
