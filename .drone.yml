@@ -14,8 +14,7 @@ pipeline:
     host: 35.201.239.81
     port: 22
     script:
-      - cd /var  # or whereever you put your `deploy.sh`
-      - sudo mkdir test
+      - sudo mkdir /var/test2  # or whereever you put your `deploy.sh`
     when:
       event: [push, tag, deployment]
   slack:
