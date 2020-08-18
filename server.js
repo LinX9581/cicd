@@ -1,16 +1,16 @@
-const express = require('express');
+    // importing express framework
+    const express = require("express");
 
-var app = express();
+    const app = express();
 
-app.get('/', (req, res) => {
-    res.status(200).send({
-        name: 'John',
-        age: 26
+    // Respond with "hello world" for requests that hit our root "/"
+    app.get("/", function(req, res) {
+        return res.send("Hello World");
     });
-});
 
-app.listen(3000, () => {
-    console.log("Server started at port 3000");
-});
+    // listen to port 7000 by default
+    app.listen(process.env.PORT || 7000, () => {
+        console.log("Server is running");
+    });
 
-module.exports.app = app;
+    module.exports = app;
