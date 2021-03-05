@@ -8,8 +8,7 @@ pipeline:
     image: appleboy/drone-ssh
     pull: true  # always pull the latest version of the `drone-ssh` plugin
     host: 
-      - 35.201.239.81
-      - 35.236.146.68
+      - 34.80.55.142
     port: 22
     username: drone
     key:
@@ -21,7 +20,7 @@ pipeline:
       event: [push, tag, deployment]
   slack:
     image: plugins/slack
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     channel: drone-test
     template: > 
       {{#success build.status}}
