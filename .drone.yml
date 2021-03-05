@@ -6,12 +6,12 @@ pipeline:
       - npm test
   ssh-deploy:
     image: appleboy/drone-ssh
-    pull: true  # always pull the latest version of the `drone-ssh` plugin         
+    pull: true  # always pull the latest version of the `drone-ssh` plugin        
     host: 
       - 10.140.0.2
     username: drone
     key:
-      from_secret: privateKey
+      from_secret: Lonely-Kill-History-Bury-7
     target: /root/.ssh/id_rsa
     script:
       - sudo mkdir /var/test4  # or whereever you put your `deploy.sh`   
