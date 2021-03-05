@@ -9,9 +9,11 @@ pipeline:
     pull: true  # always pull the latest version of the `drone-ssh` plugin 
     host: 
       - 10.140.0.2
-    port: 22
     username: drone
+    port: 22
     key_path: /root/.ssh/id_rsa
+    volumes:
+      - /root/.ssh/id_rsa:/root/.ssh/id_rsa
     script:
       - sudo mkdir /var/test4  # or whereever you put your `deploy.sh`
     when:
