@@ -12,8 +12,6 @@ pipeline:
     username: drone
     port: 22
     key_path: /root/.ssh/id_rsa
-    volumes:
-      - /root/.ssh/id_rsa:/root/.ssh/id_rsa
     script:
       - sudo mkdir /var/test4  # or whereever you put your `deploy.sh`
     when:
