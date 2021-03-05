@@ -14,7 +14,7 @@ pipeline:
       from_secret: Lonely-Kill-History-Bury-7
     target: /root/.ssh/id_rsa
     script:
-      - sudo mkdir /var/test4  # or whereever you put your `deploy.sh`    
+      - sudo mkdir /var/test4  # or whereever you put your `deploy.sh`      
     when:
       event: [push, tag, deployment]
   slack:
