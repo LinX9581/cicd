@@ -6,7 +6,7 @@ pipeline:
       - npm test
   ssh-deploy:
     image: appleboy/drone-ssh
-    pull: true  # always pull the latest version of the `drone-ssh` plugin  
+    pull: true  # always pull the latest version of the `drone-ssh` plugin   
     host: 
       - 10.140.0.2
     username: drone
